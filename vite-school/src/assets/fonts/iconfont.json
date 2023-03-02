@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "122415",
+      "name": "帮助",
+      "font_class": "bangzhu",
+      "unicode": "f0156",
+      "unicode_decimal": 983382
+    },
+    {
+      "icon_id": "586875",
+      "name": "fav-l",
+      "font_class": "favl",
+      "unicode": "e71d",
+      "unicode_decimal": 59165
+    },
+    {
+      "icon_id": "1160153",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "7594162",
+      "name": "24gf-playlistHeart3",
+      "font_class": "24gf-playlistHeart3",
+      "unicode": "ea84",
+      "unicode_decimal": 60036
+    }
+  ]
+}
