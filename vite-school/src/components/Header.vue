@@ -10,8 +10,8 @@
                 <ul>
                     <li><router-link to="/" exact><i class="iconfont icon-home">主页</i></router-link>
                     </li>
-                    <li><router-link to="/list"><i class="iconfont icon-24gf-playlistHeart3">列表</i></router-link></li>
-                    <li><router-link to="/add"><i class="iconfont icon-favl">添加</i> </router-link>
+                    <li><router-link to="/list"><i class="iconfont icon-24gf-playlistHeart3">表白墙</i></router-link></li>
+                    <li><router-link to="/add"><i class="iconfont icon-favl">我要表白</i> </router-link>
                     </li>
                     <li> <router-link to="/help"><i class="iconfont icon-bangzhu">帮助</i></router-link>
                     </li>
@@ -21,7 +21,6 @@
                 </ul>
             </div>
         </div>
-        <router-view></router-view>
     </div>
 </template>
 
