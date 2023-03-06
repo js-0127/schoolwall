@@ -69,9 +69,6 @@ const rules = reactive<FormRules>({
         { required: true, message: "表白者姓名不能为空", trigger: 'change' },
         { min: 1, max: 8, message: '姓名在1-8个字符之间', trigger: 'blur' }
     ],
-    confessorRegion: [
-        { required: true, trigger: 'blur' }
-    ],
     professedName: [
         { required: true, message: "表白者姓名不能为空", trigger: 'change' },
         { min: 1, max: 8, message: '姓名在1-8个字符之间', trigger: 'blur' }

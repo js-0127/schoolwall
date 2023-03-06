@@ -9,10 +9,6 @@ export interface FormRules {
         message: string;
         trigger: string;
     })[],
-    confessorRegion: {
-        required: boolean;
-        trigger: string;
-    }[],
     professedName: ({
         required: boolean;
         message: string;
@@ -43,4 +39,44 @@ export interface UserType {
     description: string;
     delivery: boolean;
     anoymity: boolean;
+}
+export interface RegisterType {
+    name: string;
+    password: string;
+    email: string;
+    secondpass: string;
+    identify: string;
+}
+
+export interface RulesType {
+    name: ({
+        required: boolean,
+        message: string,
+        trigger: string
+    } | {
+        min: number,
+        max: number,
+        message: string,
+        trigger: string
+    })[],
+    email: ({
+        type: string,
+        required: boolean,
+        message: string,
+        trigger: string
+    })[],
+    password: ({
+        required: boolean,
+        message: string,
+        trigger: string
+    } | {
+        min: number,
+        max: number,
+        message: string,
+        trigger: string
+    })[],
+    secondpass: ({
+        validator: (rule: RulesType, value: any, callback: any) => void,
+        trigger: string
+    })[]
 }

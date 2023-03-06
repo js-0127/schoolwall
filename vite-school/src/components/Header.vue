@@ -5,7 +5,7 @@
                 <router-link to="/">
                     <img src="../assets/image/fvicon.png" alt="">
                 </router-link>
-            </div>
+            </div> 
             <div class="menu">
                 <ul>
                     <li><router-link to="/" exact><i class="iconfont icon-home">主页</i></router-link>

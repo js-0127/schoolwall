@@ -3,6 +3,7 @@
     <div class="box">
         <router-view></router-view>
     </div>
+    
     <div class="footer">
         <Footer></Footer>
     </div>
@@ -12,6 +13,7 @@
 import { defineAsyncComponent } from 'vue'
 const Header = defineAsyncComponent(() => import('./components/Header.vue'))
 const Footer = defineAsyncComponent(() => import('./components/Footer.vue'))
+
 </script>
 
 <style lang="less"> * {

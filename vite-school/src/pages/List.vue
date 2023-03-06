@@ -4,77 +4,14 @@
             <el-input type="text" placeholder="搜索" />
         </div>
         <div class="table">
-            <el-card class="box-card">
+            <el-card class="box-card" v-for="user in users" :key="user.id">
                 <template #header>
                     <div class="card-header">
-                        <span>阿狗 <i class="icon icon-xihuan"></i> 好</span>
+                        <span>{{ user.username }}<i class="icon icon-xihuan"></i> 好</span>
                         <el-button class="button" text>Operation button</el-button>
                     </div>
                 </template>
-                <div v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</div>
-            </el-card>
-            <el-card class="box-card">
-                <template #header>
-                    <div class="card-header">
-                        <span>阿狗 <i class="icon icon-xihuan"></i> 好</span>
-                        <el-button class="button" text>Operation button</el-button>
-                    </div>
-                </template>
-                <div v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</div>
-            </el-card>
-            <el-card class="box-card">
-                <template #header>
-                    <div class="card-header">
-                        <span>阿狗 <i class="icon icon-xihuan"></i> 好</span>
-                        <el-button class="button" text>Operation button</el-button>
-                    </div>
-                </template>
-                <div v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</div>
-            </el-card>
-            <el-card class="box-card">
-                <template #header>
-                    <div class="card-header">
-                        <span>阿狗 <i class="icon icon-xihuan"></i> 好</span>
-                        <el-button class="button" text>Operation button</el-button>
-                    </div>
-                </template>
-                <div v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</div>
-            </el-card>
-            <el-card class="box-card">
-                <template #header>
-                    <div class="card-header">
-                        <span>阿狗 <i class="icon icon-xihuan"></i> 好</span>
-                        <el-button class="button" text>Operation button</el-button>
-                    </div>
-                </template>
-                <div v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</div>
-            </el-card>
-            <el-card class="box-card">
-                <template #header>
-                    <div class="card-header">
-                        <span>阿狗 <i class="icon icon-xihuan"></i> 好</span>
-                        <el-button class="button" text>Operation button</el-button>
-                    </div>
-                </template>
-                <div v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</div>
-            </el-card>
-            <el-card class="box-card">
-                <template #header>
-                    <div class="card-header">
-                        <span>阿狗 <i class="icon icon-xihuan"></i> 好</span>
-                        <el-button class="button" text>Operation button</el-button>
-                    </div>
-                </template>
-                <div v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</div>
-            </el-card>
-            <el-card class="box-card">
-                <template #header>
-                    <div class="card-header">
-                        <span>阿狗 <i class="icon icon-xihuan"></i> 好</span>
-                        <el-button class="button" text>Operation button</el-button>
-                    </div>
-                </template>
-                <div v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</div>
+                <div class="item">{{ user.id }}--{{ user.password }}--{{ user.email }}</div>
             </el-card>
         </div>
         <div class="pagination">
@@ -84,6 +21,14 @@
 </template>
 
 <script lang="ts" setup>
+import { onMounted, ref } from 'vue'
+import axios from 'axios'
+const users = ref([])
+onMounted(async () => {
+    const res = await axios.get('http://127.0.0.1:3001')
+    users.value = res.data
+    console.log(users.value.length)
+}) 
 </script>
 
 <style scoped lang="less">
